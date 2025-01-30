@@ -1,8 +1,8 @@
-# Sistema de Ordens de Serviço - Pelotão de Obras
+# Sistema Gestão Patrimonial - SiGePA
 
 ## Descrição
 
-O **Sistema de Ordens de Serviço** foi desenvolvido para o pelotão de obras do Exército, com o objetivo de gerenciar e controlar as ordens de serviço, tarefas e recursos utilizados nas atividades do pelotão. O sistema foi desenvolvido utilizando o framework **Laravel**, visando proporcionar uma solução eficiente, segura e fácil de usar para a gestão das operações.
+O **Sistema Gestão Patrimonial** foi desenvolvido para o pelotão de obras do Exército, com o objetivo de gerenciar e controlar as ordens de serviço, tarefas e recursos utilizados nas atividades do pelotão. O sistema foi desenvolvido utilizando o framework **Laravel**, visando proporcionar uma solução eficiente, segura e fácil de usar para a gestão das operações.
 
 ## Funcionalidades
 
