@@ -1,4 +1,3 @@
-````markdown
 # Sistema de Ordens de Serviço - Pelotão de Obras
 
 ## Descrição
@@ -27,7 +26,6 @@ O **Sistema de Ordens de Serviço** foi desenvolvido para o pelotão de obras do
     ```bash
     git clone https://github.com/usuario/repo.git
     ```
-````
 
 2. Instale as dependências do projeto:
 
