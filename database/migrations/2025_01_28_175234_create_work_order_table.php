@@ -17,7 +17,7 @@ return new class extends Migration {
             $table->string('location');
             $table->enum('priority', ['baixa', 'média', 'alta'])->default('baixa');
             $table->string('category');
-            $table->enum('status', ['aberta', 'em andamento', 'finalizada', 'cancelada'])->default('aberta');
+            $table->enum('status', ['aberta', 'em_andamento', 'finalizada', 'cancelada'])->default('aberta');
             $table->text('feedback')->nullable();
             $table->tinyInteger('feedback_note')->nullable();
             $table->unsignedBigInteger('user_id');

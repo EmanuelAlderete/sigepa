@@ -76,6 +76,7 @@ class LoginPage extends BaseLoginPage
     {
         return DatePicker::make('birth')
             ->label('Data de Nascimento')
+            ->autofocus()
             ->required();
     }
 

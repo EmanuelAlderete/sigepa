@@ -2,11 +2,13 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\Pivot;
 
 class WorkOrder extends Pivot
 {
+    use HasFactory;
     protected $fillable = [
         'description',
         'location',
@@ -27,4 +29,5 @@ class WorkOrder extends Pivot
     {
         return $this->belongsTo(User::class);
     }
+
 }
