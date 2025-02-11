@@ -46,19 +46,35 @@ O **Sistema Gestão Patrimonial** foi desenvolvido para o pelotão de obras do E
     php artisan key:generate
     ```
 
-5. Execute as migrações para criar as tabelas no banco de dados:
+5. Configure o ambiente Docker:
 
     ```bash
-    php artisan migrate
+     php artisan sail:install
     ```
-
-6. Inicie o servidor de desenvolvimento:
 
     ```bash
-    php artisan serve
+     ./vendor/bin/sail up
     ```
 
-    O sistema estará disponível em `http://localhost:8000`.
+6. Execute as migrações, seeders e gere as permissões:
+
+    ```bash
+    ./vendor/bin/sail artisan migrate
+    ```
+
+    ```bash
+    ./vendor/bin/sail artisan db:seed
+    ```
+
+    ```bash
+    ./vendor/bin/sail artisan shield:super-admin
+    ```
+
+    ```bash
+    ./vendor/bin/sail artisan shield:generate --all
+    ```
+
+    O sistema estará disponível em `http://localhost:8080`.
 
 ## Contribuições
 
