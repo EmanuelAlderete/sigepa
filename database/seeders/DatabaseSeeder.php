@@ -22,5 +22,9 @@ class DatabaseSeeder extends Seeder
 
         WorkOrder::factory(10)->create();
 
+        $this->call([
+            ShieldSeeder::class,
+        ]);
+
     }
 }
