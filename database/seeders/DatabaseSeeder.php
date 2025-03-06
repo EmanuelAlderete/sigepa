@@ -14,17 +14,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory()->create([
-            'name' => 'Administrador',
-            'idt' => '031.778.097-1',
-            'password' => bcrypt('0317780971'),
-        ]);
-
-        WorkOrder::factory(10)->create();
+        // WorkOrder::factory(10)->create();
 
         $this->call([
             ShieldSeeder::class,
         ]);
+
+        User::factory()->create([
+            'name' => 'Administrador',
+            'idt' => '031.778.097-1',
+            'password' => bcrypt('0317780971'),
+        ])->roles()->attach(1);
 
     }
 }
