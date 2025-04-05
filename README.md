@@ -1,89 +1,33 @@
-# Sistema Gestão Patrimonial - SiGePA
+# 🛠️ SiGePa – Sistema de Gestão Patrimonial
 
-## Descrição
+**SiGePa** é um sistema web desenvolvido em **2025** para auxiliar na criação e gestão de **ordens de serviço** da seção de manutenção patrimonial do **3º Batalhão Logístico do Exército Brasileiro**.
 
-O **Sistema Gestão Patrimonial** foi desenvolvido para o pelotão de obras do Exército, com o objetivo de gerenciar e controlar as ordens de serviço, tarefas e recursos utilizados nas atividades do pelotão. O sistema foi desenvolvido utilizando o framework **Laravel**, visando proporcionar uma solução eficiente, segura e fácil de usar para a gestão das operações.
+Seu objetivo é otimizar o fluxo de solicitações, registro e acompanhamento de serviços relacionados a bens patrimoniais, proporcionando maior controle, organização e transparência nos processos administrativos da seção.
 
-## Funcionalidades
+---
 
--   **Cadastro de Ordens de Serviço**: Permite o registro de novas ordens de serviço, incluindo informações como data, descrição da tarefa, responsável, entre outros.
--   **Acompanhamento de Status**: Acompanhe o progresso de cada ordem de serviço, desde a criação até a conclusão.
--   **Gestão de Tarefas**: Organize e atribua tarefas relacionadas a cada ordem de serviço, com prazos e responsáveis.
--   **Relatórios**: Gere relatórios detalhados sobre as ordens de serviço e tarefas realizadas.
--   **Controle de Recursos**: Registre e controle os recursos necessários para a execução das ordens de serviço (materiais, veículos, equipamentos, etc.).
+## 🎯 Objetivo
 
-## Tecnologias Utilizadas
+Desenvolver uma solução digital customizada para a realidade do ambiente militar, atendendo às necessidades específicas do setor de manutenção patrimonial com foco em praticidade, rastreabilidade e usabilidade.
 
--   **Laravel** (versão 11)
--   **PHP** (versão 8.3)
--   **SQLite**
--   **Filament V3**
+---
 
-## Instalação
+## 🧰 Tecnologias Utilizadas
 
-1. Clone o repositório para sua máquina local:
+- **PHP 8.x** com **Laravel 12** – estrutura backend robusta e moderna
+- **Filament PHP** – painel administrativo com interface elegante e componentes prontos
+- **MySQL** – banco de dados relacional
+- **HTML5 & CSS3** – estrutura e layout
+- **JavaScript (vanilla)** – interações frontend
+- **Blade** – engine de templates do Laravel
 
-    ```bash
-    git clone https://github.com/usuario/repo.git
-    ```
+---
 
-2. Instale as dependências do projeto:
+## 🔐 Funcionalidades Principais
 
-    ```bash
-    cd nome-do-projeto
-    composer install
-    ```
-
-3. Crie um arquivo `.env` e configure as variáveis de ambiente:
-
-    ```bash
-    cp .env.example .env
-    ```
-
-4. Gere a chave de aplicativo do Laravel:
-
-    ```bash
-    php artisan key:generate
-    ```
-
-5. Configure o ambiente Docker:
-
-    ```bash
-     php artisan sail:install
-    ```
-
-    ```bash
-     ./vendor/bin/sail up
-    ```
-
-6. Execute as migrações, seeders e gere as permissões:
-
-    ```bash
-    ./vendor/bin/sail artisan migrate
-    ```
-
-    ```bash
-    ./vendor/bin/sail artisan db:seed
-    ```
-
-    ```bash
-    ./vendor/bin/sail artisan shield:super-admin
-    ```
-
-    ```bash
-    ./vendor/bin/sail artisan shield:generate --all
-    ```
-
-    O sistema estará disponível em `http://localhost:8080`.
-
-## Contribuições
-
-Sinta-se à vontade para contribuir com melhorias ou correções. Para isso, faça um fork do repositório e envie um pull request com suas alterações.
-
-## Licença
-
-Este projeto está sob a licença [MIT](LICENSE).
-
-## Contato
-
-Para mais informações, entre em contato com [luisemanuel.alderete@gmail.com](mailto:luisemanuel.alderete@gmail.com).
+- 🧾 **Cadastro e emissão de ordens de serviço**
+- 🛠️ **Classificação por setor, tipo de serviço e responsável**
+- 📍 **Acompanhamento do status da manutenção**
+- 🗃️ **Histórico detalhado por item patrimonial**
+- 🧑‍💼 **Painel administrativo com Filament PHP**
+- 🧩 **Autenticação com níveis de acesso**
