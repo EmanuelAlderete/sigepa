@@ -28,6 +28,5 @@ Desenvolver uma solução digital customizada para a realidade do ambiente milit
 - 🧾 **Cadastro e emissão de ordens de serviço**
 - 🛠️ **Classificação por setor, tipo de serviço e responsável**
 - 📍 **Acompanhamento do status da manutenção**
-- 🗃️ **Histórico detalhado por item patrimonial**
 - 🧑‍💼 **Painel administrativo com Filament PHP**
 - 🧩 **Autenticação com níveis de acesso**
