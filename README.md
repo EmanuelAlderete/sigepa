@@ -30,3 +30,41 @@ Desenvolver uma solução digital customizada para a realidade do ambiente milit
 - 📍 **Acompanhamento do status da manutenção**
 - 🧑‍💼 **Painel administrativo com Filament PHP**
 - 🧩 **Autenticação com níveis de acesso**
+
+---
+
+## 🐳 Instalação com Docker Compose
+
+### Pré-requisitos
+
+- Docker
+- Docker Compose
+- Git
+
+### Passo a Passo
+
+1. **Clone o repositório**
+   ```bash
+   git clone https://github.com/seu-usuario/sigepa.git
+   cd sigepa
+   ```
+
+2. **Inicie os containers**
+   ```bash
+   docker compose up -d
+   ```
+
+3. **Acesse a aplicação**
+   - Abra seu navegador e acesse: `http://localhost:8000`
+   - O painel administrativo estará disponível em: `http://localhost:8000/app`
+
+### Configuração Automática
+
+O sistema é configurado automaticamente durante o build e inicialização:
+
+- O arquivo `.env` é criado a partir do `.env.example`
+- A chave da aplicação é gerada automaticamente
+- O banco de dados é inicializado com migrações e seeders
+- Os caches são limpos automaticamente
+- As permissões dos diretórios são configuradas
+- O banco de dados é inicializado com dados de exemplo

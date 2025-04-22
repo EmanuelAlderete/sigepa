@@ -14,11 +14,19 @@ RUN curl -sS https://getcomposer.org/installer | php && \
 # Define o diretório de trabalho
 WORKDIR /var/www/html
 
-# Copia os arquivos do Laravel para o contêiner
-COPY . /var/www/html/
+# Copia apenas os arquivos de configuração do Composer primeiro
+COPY composer.json composer.lock ./
 
 # Instala as dependências do Laravel
-RUN composer install
+RUN composer install --no-scripts --no-autoloader
+
+# Copia o resto dos arquivos do Laravel
+COPY . .
+
+# Configura o ambiente
+RUN cp .env.example .env && \
+    php artisan key:generate --force && \
+    composer dump-autoload --optimize
 
 # Configura o Apache para servir a pasta 'public' do Laravel
 RUN echo 'ServerName localhost' >> /etc/apache2/apache2.conf
@@ -28,7 +36,7 @@ COPY ./docker/apache/000-default.conf /etc/apache2/sites-available/000-default.c
 RUN a2enmod rewrite
 
 # Permissão para a pasta de cache e logs do Laravel
-RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
+RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/vendor /var/www/html/.env
 
 # Expondo a porta 80
 EXPOSE 80
