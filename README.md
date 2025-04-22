@@ -45,7 +45,7 @@ Desenvolver uma solução digital customizada para a realidade do ambiente milit
 
 1. **Clone o repositório**
    ```bash
-   git clone [https://github.com/seu-usuario/sigepa.git](https://github.com/EmanuelAlderete/sigepa.git)
+   git clone https://github.com/EmanuelAlderete/sigepa.git
    cd sigepa
    ```
 
